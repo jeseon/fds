@@ -24,6 +24,8 @@
                └─kakaopay
                    └─api
                        └─engine     # FDS Engine 테스트
+                           ├─RuleEngineMockDataTest  # Mockup Data 테스트 (RuleA/B/C 모두 위반 적용)
+                           └─RuleEngineTest          # CSV Data 테스트 (RuleA/B/C 각각 위반 테스트)
 ```
 
 ## FDS Engine
