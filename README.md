@@ -19,12 +19,11 @@
     │  └─resources
     │     └─data                    # 테스트용 CSV 데이터 파일
     └─test
-        ├─java
-        │  └─com
-        │      └─kakaopay
-        │          └─api
-        │              └─engine     # FDS Engine 테스트
-        └─resources
+        └─java
+           └─com
+               └─kakaopay
+                   └─api
+                       └─engine     # FDS Engine 테스트
 ```
 
 ## FDS Engine
