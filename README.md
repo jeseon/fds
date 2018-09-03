@@ -46,12 +46,12 @@ fraud = new RuleC(fraud, accountLog, depositLogs, receivedLogs, remittedLogs);
 
 ## 다운로드
 
-[FDS Application](https://github.com/jeseon/fds/releases/download/0.0.1/fds-0.0.1.war)
+[FDS Application](https://github.com/jeseon/fds/releases/download/0.0.1/fds-v0.0.1-jeseon.war)
 
 
 ## 실행 방법
 ```
-$ java -jar fds-0.0.1.war
+$ java -jar fds-v0.0.1-jeseon.war
 ```
 
 ## 테스트 방법
