@@ -1,0 +1,7 @@
+server:
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
