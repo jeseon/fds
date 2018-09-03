@@ -54,14 +54,36 @@ fraud = new RuleC(fraud, accountLog, depositLogs, receivedLogs, remittedLogs);
 $ java -jar fds-v0.0.1-jeseon.war
 ```
 
-## 테스트 방법
+## 테스트 예시
+### Invalid user_id 1111 (violated RuleA)
 ```
 $ curl -i http://localhost:8080/v1/fraud/1111
-
 HTTP/1.1 200
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 03 Sep 2018 19:48:15 GMT
+Date: Mon, 03 Sep 2018 21:05:45 GMT
 
 {"user_id":1111,"is_fraud":true,"rule":"RuleA"}
+```
+
+### Invalid user_id 8888 (violated RuleB)
+```
+$ curl -i http://localhost:8080/v1/fraud/8888
+HTTP/1.1 200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 03 Sep 2018 21:06:03 GMT
+
+{"user_id":8888,"is_fraud":true,"rule":"RuleB"}
+```
+
+### Valid user_id 2000 (passed RuleA, RuleB and RuleC)
+```
+$ curl -i http://localhost:8080/v1/fraud/2000
+HTTP/1.1 200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 03 Sep 2018 21:07:50 GMT
+
+{"user_id":2000,"is_fraud":false,"rule":""}
 ```
