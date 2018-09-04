@@ -35,6 +35,14 @@ Rule 추가/삭제를 용의하게 하기 위해 Decorator 패턴 적용
 ### UML
 ![Engine UML](/doc/engine.png)
 
+### 클래스 설명
+ * Fraud: 공통 인터페이스
+ * FraudRule: Fraud에 Rule을 적용할 클래스 
+ * Rule: 데코레이터 추상 클래스
+ * RuleA: FraudRule 객체를 감싸는 데코레이터 RuleA
+ * RuleB: FraudRule 객체를 감싸는 데코레이터 RuleB
+ * RuleC: FraudRule 객체를 감싸는 데코레이터 RuleC
+
 ### 적용 방법
 ```java
 /**
